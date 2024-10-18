@@ -1,7 +1,12 @@
 # NoBSTwitter
 
 
-Tweet from an android device without needing the twitter app installed.
+Tweet from an android device without needing the twitter app installed. 
+A really barebones first attempt at learning flutter
+
+
+<img src="https://github.com/user-attachments/assets/030e1bae-f15f-46c8-9328-b186f0383fae" width=30% height=30%>
+
 
 ## Building
 
