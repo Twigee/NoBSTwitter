@@ -1,6 +1,6 @@
-import 'package:flutter/material.dart';
+import 'dart:io';
 
-import 'package:http/http.dart';
+import 'package:flutter/material.dart';
 
 import 'package:twitter_api_v2/twitter_api_v2.dart' as v2;
 
@@ -10,19 +10,24 @@ void main() {
 
 final TextEditingController fieldCont = TextEditingController();
 
-String myAuthToken = "";
-String myAuthSecretToken = "";
-
 Future login() async {
   final twitter = v2.TwitterApi(
       bearerToken: "",
       oauthTokens: v2.OAuthTokens(
+          // FILL IN YOUR OWN KEYS HERE
           consumerKey: "",
           consumerSecret: "",
           accessToken: "",
           accessTokenSecret: ""));
 
-  await twitter.tweets.createTweet(text: fieldCont.text);
+  final response = await twitter.tweets.createTweet(text: fieldCont.text);
+  print(response.status.runtimeType);
+  if (response.status.code == HttpStatus.created) {
+    print("Clearing");
+    fieldCont.clear();
+  } else {
+    print("Something went wrong");
+  }
 }
 
 class MyApp extends StatelessWidget {
