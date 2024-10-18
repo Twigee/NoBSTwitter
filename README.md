@@ -1,16 +1,12 @@
 # NoBSTwitter
 
-A new Flutter project.
 
-## Getting Started
+Tweet from an android device without needing the twitter app installed.
 
-This project is a starting point for a Flutter application.
+## Building
 
-A few resources to get you started if this is your first Flutter project:
+Go throught the flutter install guide on their webside. In the main.dart file, you will need to include your own api keys, you can get them from your twitter (x) developer dashboard.
+![image](https://github.com/user-attachments/assets/65b5cbe0-72df-4a34-912f-bff3c0ff45fd)
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+then in the root of the repo, run 
+``` flutter build apk ``` then go to the build directory listed and just install that to your phone
